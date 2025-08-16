@@ -469,13 +469,18 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
 </div>
 
 <script>
-  // Using countapi with namespace "ssssecurity" and key "site"
-  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/site")
+  // Correct API format: namespace + key
+  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/visits")
     .then((res) => res.json())
     .then((data) => {
       document.getElementById("visitorCount").textContent = data.value + " Visits";
+    })
+    .catch((err) => {
+      console.error("Error fetching visitor count:", err);
+      document.getElementById("visitorCount").textContent = "Error loading counter";
     });
 </script>
+
 
 
 
@@ -537,5 +542,6 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
 
 
 </html>
+
 
 
