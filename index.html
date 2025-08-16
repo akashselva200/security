@@ -460,19 +460,23 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
                 </div>
             </div>
         </div>
-       <!-- Visitor Counter Section -->
+
+
+		<!-- Visitor Counter Section -->
 <div class="container text-center my-5">
-  <h10 class="text-primary">Website Visitors</h10>
+  <h4 class="text-primary">Website Visitors</h4>
   <p id="visitorCount" class="display-6 font-weight-bold"></p>
 </div>
 
 <script>
-  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app")
+  // Using countapi with namespace "ssssecurity" and key "site"
+  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/site")
     .then((res) => res.json())
     .then((data) => {
       document.getElementById("visitorCount").textContent = data.value + " Visits";
     });
 </script>
+
 
 
 
@@ -533,4 +537,5 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
 
 
 </html>
+
 
