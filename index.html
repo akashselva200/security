@@ -462,24 +462,16 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
         </div>
 
 
-		<!-- Visitor Counter Section -->
+<!-- Visitor Counter Section -->
 <div class="container text-center my-5">
   <h4 class="text-primary">Website Visitors</h4>
-  <p id="visitorCount" class="display-6 font-weight-bold"></p>
+  <p>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=1234567&style=0006&nbdigits=5&type=page&initCount=0" 
+         title="Website Visitor Counter" 
+         Alt="Visitor Counter" 
+         border="0" />
+  </p>
 </div>
-
-<script>
-  // Correct API format: namespace + key
-  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/visits")
-    .then((res) => res.json())
-    .then((data) => {
-      document.getElementById("visitorCount").textContent = data.value + " Visits";
-    })
-    .catch((err) => {
-      console.error("Error fetching visitor count:", err);
-      document.getElementById("visitorCount").textContent = "Error loading counter";
-    });
-</script>
 
 
 
@@ -542,6 +534,7 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
 
 
 </html>
+
 
 
 
