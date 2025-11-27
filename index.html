@@ -477,11 +477,18 @@ With a commitment to discipline, integrity, and excellence, we strive to be the 
 </div>
 
 <script>
-  fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/visits")
-    .then((res) => res.json())
-    .then((data) => {
-      document.getElementById("visitorCount").textContent = data.value + " Visits";
-    });
+  // Call this when the DOM has loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("https://api.countapi.xyz/hit/ssssecurity.netlify.app/visits")
+      .then((res) => res.json())
+      .then((data) => {
+        document.getElementById("visitorCount").textContent =
+          data.value + " Visits";
+      })
+      .catch((err) => {
+        console.error("Visitor counter error:", err);
+      });
+  });
 </script>
 
 
